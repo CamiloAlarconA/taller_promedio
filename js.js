@@ -1,33 +1,18 @@
 document.querySelector('#formulario').addEventListener('submit', function(event) {
-    event.preventDefault();  
+    event.preventDefault();
 
     // Obtener los valores de los inputs
     const actividad = document.querySelector('#actividad').value;
     const nota = document.querySelector('#nota').value;
 
-    // Crear una nueva fila en la tabla
+    // Crear una nueva fila con las celdas
     const nuevaFila = document.createElement('tr');
-
-    // Crear las celdas de la fila
-    const btnEliminar = document.createElement('button');
-    btnEliminar.textContent = 'Eliminar'
-    const eliminartd = document.createElement('td');
-    eliminartd.appendChild(btnEliminar);
-    const btnModificar = document.createElement('button');
-    btnModificar.textContent = 'Modificar';
-    const modificartd = document.createElement('td');
-    modificartd.appendChild(btnModificar)
-    const celdaActividad = document.createElement('td');
-    const celdaNota = document.createElement('td');
-    // Asignar los valores del formulario a las celdas
-    celdaActividad.textContent = actividad;
-    celdaNota.textContent = nota;
-
-    // Añadir las celdas a la nueva fila
-    nuevaFila.appendChild(eliminartd);
-    nuevaFila.appendChild(modificartd);
-    nuevaFila.appendChild(celdaActividad);
-    nuevaFila.appendChild(celdaNota);
+    nuevaFila.innerHTML = `
+        <td><button onclick="eliminarFila(this)" class="eliminar">Eliminar</button></td>
+        <td><button onclick="modificarFila(this)" class="modificar">Modificar</button></td>
+        <td>${actividad}</td>
+        <td>${nota}</td>
+    `;
 
     // Añadir la nueva fila al cuerpo de la tabla
     document.querySelector('#actividades tbody').appendChild(nuevaFila);
@@ -36,3 +21,25 @@ document.querySelector('#formulario').addEventListener('submit', function(event)
     document.querySelector('#formulario').reset();
 });
 
+function eliminarFila(boton) {
+    var confirmar = confirm("¿Está seguro de que desea eliminar esta fila?");
+            if (confirmar) {
+                var fila = boton.parentNode.parentNode;
+                fila.parentNode.removeChild(fila);
+            }
+}
+
+function modificarFila(boton){
+    var fila = boton.parentNode.parentNode;
+    var actividad = fila.cells[2].textContent;
+    var nota = fila.cells[3].textContent;
+
+    document.getElementById("actividad").value = actividad;
+    document.getElementById("nota").value = nota;
+
+    if(actividad &&  nota){
+        fila.cells[2].textContent= actividad;
+        fila.cells[3].textContent= notas;
+
+    }
+}
