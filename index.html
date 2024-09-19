@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>TuPromedio.com</title>
+</head>
+<body>
+    <main>
+        <header>
+            <section class="informacion">
+                <article class="nombrePagina">
+                    <h1 id="nombreapp">TuPromedio.com</h1>
+                </article>
+                <article class="informacionEstudiante">
+                    <h2 id="nombreEstudiante">Camilo Alarcon Ayala</h2>
+                    <h3 id="codigoEstudiante">55223013</h3>
+                </article>
+            </section>
+        </header>
+        <section class="tablaNotas">
+            <table border="2" id="actividades">
+                <thead>
+                    <tr>
+                        <td>Modificar</td>
+                        <td>Eliminar</td>
+                        <td>Actividad</td>
+                        <td>Nota</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </section>
+        <section class="resultadoNotas">
+            <article class="promedio">
+                <p>Promedio <input type="text" id="promedio" maxlength="3" value="Promedio" readonly></p>
+            </article>
+            <article class="estado">
+                <p>EStado <input type="text" id="estado" maxlength="3" value="estado" readonly></p>
+            </article>
+        </section>
+        <section class="formulario">
+            <form id="formulario">
+                <label for="nombreActividad">Actividad:</label>
+                <input type="text" id="actividad"><br>
+                <label for="notaActividad">Nota:</label>
+                <input type="text" id="nota"><br>
+                <input type="submit" id="guardar" value="Guardar">
+            </form>
+        </section>
+    </main>
+    <script src="js.js"></script>
+</body>
+</html>

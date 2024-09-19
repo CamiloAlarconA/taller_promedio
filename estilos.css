@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-areas:
+        "h h . . . . . . . ."
+        "h h t t t t r r r r"
+        "h h t t t t r r r r"
+        "h h t t t t r r r r"
+        "h h t t t t r r r r"
+        "h h t t t t f f f f"
+        "h h t t t t f f f f"
+        "h h t t t t f f f f"
+        "h h t t t t f f f f"
+        "h h . . . . . . . ."
+}
+
+header {
+    grid-area: h;
+    background-color: blue;
+}
+.tablaNotas {
+    grid-area: t;
+    background-color: red;
+}
+
+.resultadoNotas {
+    grid-area: r;
+    background-color: gray;
+}
+
+.formulario{
+    grid-area: f;
+    background-color: green;
+}
