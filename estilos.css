@@ -1,42 +1,131 @@
-* {
+body {
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #E0E0E0;
 }
 
 main {
     display: grid;
-    width: 100vw;
-    height: 100vh;
-    grid-template-columns: repeat(10, 1fr);
+    width: 95vw;
+    height: 95vh;
+    grid-template-columns: 1fr 3fr 1.5fr;
     grid-template-rows: repeat(10, 1fr);
+    gap: 50px;
+    padding: 20px;
     grid-template-areas:
-        "h h . . . . . . . ."
-        "h h t t t t r r r r"
-        "h h t t t t r r r r"
-        "h h t t t t r r r r"
-        "h h t t t t r r r r"
-        "h h t t t t f f f f"
-        "h h t t t t f f f f"
-        "h h t t t t f f f f"
-        "h h t t t t f f f f"
-        "h h . . . . . . . ."
+        "h t f"
+        "h t f"
+        "h t f"
+        "h t f"
+        "h t f"
+        "h t f"
+        "h t r"
+        "h t r"
+        "h t r"
+        "h t r"
+    ;
 }
 
 header {
     grid-area: h;
-    background-color: blue;
+    background-color: #1F1F1F;
+    border-bottom: 1px solid #333;
+    padding: 1rem;
+    margin-bottom: 20px;
 }
+
+h1, h2, h3 {
+    color: #E0E0E0;
+}
+
+#nombreapp {
+    color: #BB86FC;
+}
+
 .tablaNotas {
-    grid-area: t;
-    background-color: red;
+    grid-area: t;background-color: #1F1F1F;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 3rem 0;
+}
+
+thead {
+    background-color: #333;
+}
+
+th, td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #1A1A1A;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #222;
+}
+
+button.eliminar, button.modificar {
+    background-color: #BB86FC;
+    color: #121212;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+button.eliminar:hover, button.modificar:hover {
+    background-color: #3700B3;
 }
 
 .resultadoNotas {
     grid-area: r;
-    background-color: gray;
+    background-color: #1F1F1F;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.resultadoNotas p {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="submit"] {
+    background-color: #333;
+    color: #E0E0E0;
+    border: 1px solid #444;
+    padding: 0.5rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #3700B3;
+    color: #E0E0E0;
 }
 
 .formulario{
     grid-area: f;
-    background-color: green;
+    background-color: #1F1F1F;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+    color: #E0E0E0;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#guardar {
+    width: auto;
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
+    <link rel="shortcut icon" href="imagenes/logo.png" type="image/x-icon">
     <title>TuPromedio.com</title>
 </head>
 <body>
@@ -17,16 +18,21 @@
                     <h2 id="nombreEstudiante">Camilo Alarcon Ayala</h2>
                     <h3 id="codigoEstudiante">55223013</h3>
                 </article>
+                <article class="informacionPagina">
+                    <h2>Bienvenido a TuPromedio.com</h2>
+                    <h3>Esta herramienta te permite ingresar, modificar y eliminar notas de tus actividades. Además, calculará tu promedio y te informará si has aprobado o no. Mantén tu rendimiento académico bajo control de manera sencilla y eficiente.</h3>
+                </article>
             </section>
         </header>
         <section class="tablaNotas">
+            <h1>ACTIVIDADES</h1>
             <table border="2" id="actividades">
                 <thead>
                     <tr>
-                        <td>Modificar</td>
-                        <td>Eliminar</td>
-                        <td>Actividad</td>
-                        <td>Nota</td>
+                        <td>ELIMINAR</td>
+                        <td>MODIFICAR</td>
+                        <td>ACTIVIDAD</td>
+                        <td>NOTA</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,14 +41,16 @@
             </table>
         </section>
         <section class="resultadoNotas">
+            <H1>ESTADO ACTUAL</H1>
             <article class="promedio">
-                <p>Promedio <input type="text" id="promedio" maxlength="3" value="Promedio" readonly></p>
+                <p>PROMEDIO <input type="text" id="promedio" maxlength="3" value="" readonly></p>
             </article>
             <article class="estado">
-                <p>EStado <input type="text" id="estado" maxlength="3" value="estado" readonly></p>
+                <p>ESTADO <input type="text" id="estado" maxlength="3" value="" readonly></p>
             </article>
         </section>
         <section class="formulario">
+            <H1>INGRESO DE NOTAS</H1>
             <form id="formulario">
                 <label for="nombreActividad">Actividad:</label>
                 <input type="text" id="actividad"><br>
